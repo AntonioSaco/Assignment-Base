@@ -1,29 +1,73 @@
-/* The title of the page */
-.header h1{
-    text-align: center;
-    background-color: red;
+
+body{
+
+    color:green;
+    background-image: linear-gradient( coral,coral);
+    align-items: center;
+    font: normal 18px/1.5;
+    font-weight: 90;
+    padding: 50px 0;
+
 }
 
-/* The entire form (input/results) */
-.form-container{
-    background-color: blue;
-    max-width: 960px;
-    width: 960px;
-    margin: auto;
+
+/* The title of the page */
+.header{
+    
+    height: 960px;
+    text-align: center;
+    font-weight: 900; 
+    padding: 30px;
+    text-decoration: underline;
+
 }
+/*form container dimensions*/
+.form-container{
+    box-sizing: content-box;
+    margin: -10 50 10 40;
+    margin-left: -10px;
+}
+
+
+/* The entire form (input/results) */
+.header .form-container .search-form{
+    
+    padding: 3;
+    height: none;
+    margin-left: initial;
+  
+}
+
+  
 
 /* The input box for the form */
 .search {
-    background-color: green;
+    background-color:azure;
+    margin: auto;
+    padding: 5;
+    width: -50;
 }
+
+/* To style our header's topic*/
+.flex-outer{
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
 
 /* Each individual result container */
 .suggestions li{
     margin-bottom: 15px;
+    background-image: linear-gradient( red, yellow);
+    
+    list-style-type: none;
+    padding: 4;
 }
 
 /* The text inside each result item */
 span{
     display: block;
     background-color: yellow;
+    
 }
