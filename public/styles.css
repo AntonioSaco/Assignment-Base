@@ -41,11 +41,14 @@ body{
   
 
 /* The input box for the form */
-.search {
+.search input{
     background-color:azure;
-    margin: auto;
+    margin-left: -400;
+    margin-right: 0;
+    margin-top: 40;
     padding: 5;
-    width: -50;
+    border-width: 10px;
+    
 }
 
 /* To style our header's topic*/
@@ -64,7 +67,20 @@ body{
     list-style-type: none;
     padding: 4;
 }
+.suggestions li span.name {
+    font-weight: 1000;
+    font-size: 30;
+  }
 
+.suggestions li span.category{
+    text-decoration: none;
+
+}
+
+.suggestions li span.address{
+    text-decoration: none;
+
+}
 /* The text inside each result item */
 span{
     display: block;
