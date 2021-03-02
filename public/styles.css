@@ -1,0 +1,29 @@
+/* The title of the page */
+.header h1{
+    text-align: center;
+    background-color: red;
+}
+
+/* The entire form (input/results) */
+.form-container{
+    background-color: blue;
+    max-width: 960px;
+    width: 960px;
+    margin: auto;
+}
+
+/* The input box for the form */
+.search {
+    background-color: green;
+}
+
+/* Each individual result container */
+.suggestions li{
+    margin-bottom: 15px;
+}
+
+/* The text inside each result item */
+span{
+    display: block;
+    background-color: yellow;
+}
