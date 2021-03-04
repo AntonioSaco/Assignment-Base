@@ -1,5 +1,7 @@
 const endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json'; // Where we fetch from
 
+const empty = ""; // Empty string that replaces suggestions if query becomes empty
+
 const places = []; // The array of data
 
 //Get the json data then push it into the array
@@ -11,8 +13,7 @@ fetch(endpoint)
 function findMatch(filterWord, places){
     return places.filter(place => {
         const regex = new RegExp(filterWord, 'gi'); // Global and not case sensitive
-        return place.name.match(regex) || place.address_line_1.match(regex) || 
-        place.city.match(regex) || place.category.match(regex);
+        return place.name.match(regex) || place.city.match(regex) || place.category.match(regex);
     });
 }
 
@@ -31,10 +32,16 @@ function showMatches(){
         `;
     }).join('');
     suggestions.innerHTML = html;
+
+    // Make suggestions list empty if user deletes all characters in search box
+    if (this.value.length === 0){
+        suggestions.innerHTML = empty;
+    }
 }
 
 const userSearch = document.querySelector('.search');
 const suggestions = document.querySelector('.suggestions');
 
 // Call the getMatches function everytime the user types into the searchbar
+userSearch.addEventListener('change', showMatches);
 userSearch.addEventListener('keyup', showMatches);
