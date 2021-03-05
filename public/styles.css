@@ -1,7 +1,13 @@
 
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
 body{
 
-    color:green;
+    color:rgba(29, 34, 2, 0.986)61, 161, 161);
     background-image: linear-gradient( coral,coral);
     align-items: center;
     font: normal 18px/1.5;
@@ -14,7 +20,7 @@ body{
 /* The title of the page */
 .header{
     
-    height: 960px;
+    height: 20px;
     text-align: center;
     font-weight: 900; 
     padding: 30px;
@@ -23,38 +29,40 @@ body{
 }
 /*form container dimensions*/
 .form-container{
-    box-sizing: content-box;
-    margin: -10 50 10 40;
-    margin-left: -10px;
+    list-style-type: none;
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 20px;
 }
 
 
+
 /* The entire form (input/results) */
-.header .form-container .search-form{
+.form-container .search-form .search{
     
-    padding: 3;
-    height: none;
+    box-sizing: border-box;
+    width: 600px;
+    padding: 10px;
     margin-left: initial;
   
 }
 
+
   
 
 /* The input box for the form */
-.search input{
-    background-color:azure;
-    margin-left: -400;
-    margin-right: 0;
-    margin-top: 40;
-    padding: 5;
-    border-width: 10px;
-    
+.search {
+    height: 960px;
+    text-align: center;
+    height: 20px;
+    max-width: 600px;
 }
 
 /* To style our header's topic*/
 .flex-outer{
     list-style-type: none;
-    padding: 0;
+    padding: 2;
     max-width: 800px;
     margin: 0 auto;
   }
@@ -62,10 +70,11 @@ body{
 /* Each individual result container */
 .suggestions li{
     margin-bottom: 15px;
+    margin-top: 10px;
     background-image: linear-gradient( red, yellow);
-    
     list-style-type: none;
     padding: 4;
+    border-radius: 5px;
 }
 .suggestions li span.name {
     font-weight: 1000;
@@ -84,6 +93,5 @@ body{
 /* The text inside each result item */
 span{
     display: block;
-    background-color: yellow;
     
 }
